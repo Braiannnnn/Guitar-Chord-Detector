@@ -26,9 +26,13 @@ cromáticas) más una clase de silencio, totalizando 49 clases.
 ## Pipeline
 Audio (.wav)
 └─► CQT (sr=22050, hop_length=512, n_bins=84)
+
 └─► Ventanas deslizantes (0.5s, stride=0.15s) → (N, 21, 84)
+
 └─► Modelo (Conv1D / LSTM)
+
 └─► Post-procesado (moda deslizante, 7 frames)
+
 └─► Secuencia de acordes con intervalos temporales
 
 
